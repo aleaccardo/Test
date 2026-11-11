@@ -20,11 +20,12 @@ public class UserInterface {
     public int askMark() {
         System.out.println("Scegli il simbolo con cui giocherai:");
         while (true) {
-            System.out.print("Inserisci 1 per 'X' o 2 per 'O' : ");
-            int scelta=scanner.nextInt();
-            if (scelta==1)
+            System.out.print("Inserisci X oppure O: ");
+            String scelta=scanner.next();
+	    
+            if (scelta.equalsIgnoreCase("X"))
                 return Board.CELL_X;
-            else if (scelta==2)
+            else if (scelta.equalsIgnoreCase("O"))
                 return Board.CELL_O;
         }
     }
